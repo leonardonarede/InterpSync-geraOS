@@ -56,6 +56,7 @@
 /* 56:57 */     stmt.setInt(6, prazo.getStEI());
 /* 57:58 */     stmt.executeUpdate();
 /* 58:59 */     stmt.close();
+                connection.close();
 /* 59:   */   }
 /* 60:   */   
 /* 61:   */   public void atualizar(Prazos_ERP prazo)
@@ -72,6 +73,7 @@
 /* 72:74 */     stmt.setString(6, prazo.getCodPR());
 /* 73:75 */     stmt.executeUpdate();
 /* 74:76 */     stmt.close();
+                connection.close();
 /* 75:   */   }
 /* 76:   */   
 /* 77:   */   public Prazos_ERP localizarPorID(String id)
@@ -94,12 +96,17 @@
 /* 94:96 */       prazo.setStEI(rs.getInt("StEI"));
 /* 95:   */     }
 /* 96:98 */     stmt.close();
+                connection.close();
 /* 97:99 */     return prazo;
 /* 98:   */   }
 /* 99:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Prazos_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Prazos_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

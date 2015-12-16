@@ -54,6 +54,7 @@
 /* 54:55 */     stmt.setInt(4, parc.getStEI());
 /* 55:56 */     stmt.executeUpdate();
 /* 56:57 */     stmt.close();
+                connection.close();
 /* 57:   */   }
 /* 58:   */   
 /* 59:   */   public void atualizar(Parcprazos_ERP parc)
@@ -67,6 +68,7 @@
 /* 67:69 */     stmt.setString(4, parc.getCodPR());
 /* 68:70 */     stmt.executeUpdate();
 /* 69:71 */     stmt.close();
+                connection.close();
 /* 70:   */   }
 /* 71:   */   
 /* 72:   */   public Parcprazos_ERP localizarPorID(String id)
@@ -86,12 +88,17 @@
 /* 86:88 */       parc.setStEI(rs.getInt("StEI"));
 /* 87:   */     }
 /* 88:90 */     stmt.close();
+                connection.close();
 /* 89:91 */     return parc;
 /* 90:   */   }
 /* 91:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Parcprazos_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Parcprazos_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

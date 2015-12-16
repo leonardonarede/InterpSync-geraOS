@@ -94,6 +94,7 @@
 /*  94: 94 */     stmt.setString(41, forn.getWshash());
 /*  95: 95 */     stmt.executeUpdate();
 /*  96: 96 */     stmt.close();
+                  conexao.close();
 /*  97:    */   }
 /*  98:    */   
 /*  99:    */   public Fornecedor_SACI buscar(String cpfcgc)
@@ -122,6 +123,8 @@
 /* 122:121 */       forn.setColl(rs.getString("coll"));
 /* 123:122 */       forn.setFabOufor(Integer.valueOf(rs.getInt("fabOufor")));
 /* 124:    */     }
+                  stmt.close();
+                  conexao.close();
 /* 125:124 */     return forn;
 /* 126:    */   }
 /* 127:    */   
@@ -136,6 +139,8 @@
 /* 136:135 */     if (rs.next()) {
 /* 137:136 */       ultimo = Integer.valueOf(rs.getInt("ultimo") + 1);
 /* 138:    */     }
+                  stmt.close();
+                  conexao.close();
 /* 139:138 */     return ultimo;
 /* 140:    */   }
 /* 141:    */ }

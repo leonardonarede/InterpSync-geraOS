@@ -59,6 +59,7 @@
 /*  59: 60 */     stmt.setString(7, osvr.getFilialTit());
 /*  60: 61 */     stmt.executeUpdate();
 /*  61: 62 */     stmt.close();
+                  connection.close();
 /*  62:    */   }
 /*  63:    */   
 /*  64:    */   public void atualizar(Osvr_ERP osvr)
@@ -79,6 +80,7 @@
 /*  79: 81 */     stmt.setString(8, osvr.getCodigoReg());
 /*  80: 82 */     stmt.executeUpdate();
 /*  81: 83 */     stmt.close();
+                  connection.close();
 /*  82:    */   }
 /*  83:    */   
 /*  84:    */   public Osvr_ERP localizarPorID(Integer nos, String tiporeg, String codreg)
@@ -105,6 +107,7 @@
 /* 105:107 */       osvr.setStatusERP(rs.getInt("StatusERP"));
 /* 106:    */     }
 /* 107:109 */     stmt.close();
+                  connection.close();
 /* 108:110 */     return osvr;
 /* 109:    */   }
 /* 110:    */   
@@ -129,12 +132,17 @@
 /* 129:131 */       lista.add(osvr);
 /* 130:    */     }
 /* 131:133 */     stmt.close();
+                  connection.close();
 /* 132:134 */     return lista;
 /* 133:    */   }
 /* 134:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Osvr_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Osvr_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

@@ -62,6 +62,7 @@
 /* 62:62 */       laudos.add(laudo);
 /* 63:   */     }
 /* 64:64 */     stmt.close();
+                connection.close();
 /* 65:65 */     return laudos;
 /* 66:   */   }
 /* 67:   */   
@@ -83,6 +84,7 @@
 /* 83:82 */       laudos.add(laudo);
 /* 84:   */     }
 /* 85:84 */     stmt.close();
+                connection.close();
 /* 86:85 */     return laudos;
 /* 87:   */   }
 /* 88:   */   
@@ -96,11 +98,16 @@
 /* 96:96 */     stmt.setString(2, laudo.getCodLA());
 /* 97:97 */     stmt.executeUpdate();
 /* 98:98 */     stmt.close();
+                connection.close();
 /* 99:   */   }
 /* :0:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Laudosrec_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Laudosrec_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

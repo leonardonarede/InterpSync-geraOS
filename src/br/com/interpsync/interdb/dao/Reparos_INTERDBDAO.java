@@ -53,6 +53,7 @@
 /* 53:54 */     stmt.setInt(3, reparo.getStei());
 /* 54:55 */     stmt.executeUpdate();
 /* 55:56 */     stmt.close();
+                connection.close();
 /* 56:   */   }
 /* 57:   */   
 /* 58:   */   public void atualizar(Reparos_ERP reparo)
@@ -65,6 +66,7 @@
 /* 65:67 */     stmt.setString(3, reparo.getCodRP());
 /* 66:68 */     stmt.executeUpdate();
 /* 67:69 */     stmt.close();
+                connection.close();
 /* 68:   */   }
 /* 69:   */   
 /* 70:   */   public Reparos_ERP localizarPorID(String id)
@@ -83,12 +85,17 @@
 /* 83:85 */       reparo.setStei(rs.getInt("Stei"));
 /* 84:   */     }
 /* 85:87 */     stmt.close();
+                connection.close();
 /* 86:88 */     return reparo;
 /* 87:   */   }
 /* 88:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Reparos_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Reparos_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

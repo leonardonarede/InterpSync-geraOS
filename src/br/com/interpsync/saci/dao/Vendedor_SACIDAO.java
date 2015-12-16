@@ -88,6 +88,7 @@
 /* 88:86 */       return vendedor;
 /* 89:   */     }
 /* 90:88 */     stmt.close();
+                conexao.close();
 /* 91:89 */     return null;
 /* 92:   */   }
 /* 93:   */ }

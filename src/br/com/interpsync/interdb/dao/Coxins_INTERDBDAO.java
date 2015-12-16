@@ -53,6 +53,7 @@
 /* 53:54 */     stmt.setInt(4, coxin.getStei());
 /* 54:55 */     stmt.executeUpdate();
 /* 55:56 */     stmt.close();
+                connection.close();
 /* 56:   */   }
 /* 57:   */   
 /* 58:   */   public void atualizar(Coxins_ERP coxin)
@@ -66,6 +67,7 @@
 /* 66:68 */     stmt.setString(4, coxin.getCodCX());
 /* 67:69 */     stmt.executeUpdate();
 /* 68:70 */     stmt.close();
+                connection.close();
 /* 69:   */   }
 /* 70:   */   
 /* 71:   */   public Coxins_ERP localizarPorId(String id)
@@ -85,12 +87,17 @@
 /* 85:87 */       coxin.setStei(rs.getInt("Stei"));
 /* 86:   */     }
 /* 87:89 */     stmt.close();
+                connection.close();
 /* 88:90 */     return coxin;
 /* 89:   */   }
 /* 90:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Coxins_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Coxins_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

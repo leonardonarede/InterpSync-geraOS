@@ -63,6 +63,7 @@
 /*  63: 63 */       modelos.add(modelo);
 /*  64:    */     }
 /*  65: 65 */     stmt.close();
+                  connection.close();
 /*  66: 66 */     return modelos;
 /*  67:    */   }
 /*  68:    */   
@@ -85,6 +86,7 @@
 /*  85: 85 */       modelos.add(modelo);
 /*  86:    */     }
 /*  87: 87 */     stmt.close();
+                  connection.close();
 /*  88: 88 */     return modelos;
 /*  89:    */   }
 /*  90:    */   
@@ -100,11 +102,16 @@
 /* 100:101 */     stmt.setString(5, modelos.getCodMO());
 /* 101:102 */     stmt.executeUpdate();
 /* 102:103 */     stmt.close();
+                  connection.close();
 /* 103:    */   }
 /* 104:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Modelos_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Modelos_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

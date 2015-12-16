@@ -68,6 +68,7 @@
 /*  68: 68 */       desenhos.add(desenho);
 /*  69:    */     }
 /*  70: 70 */     stmt.close();
+                  connection.close();
 /*  71: 71 */     return desenhos;
 /*  72:    */   }
 /*  73:    */   
@@ -95,6 +96,7 @@
 /*  95: 95 */       desenhos.add(desenho);
 /*  96:    */     }
 /*  97: 97 */     stmt.close();
+                  connection.close();
 /*  98: 98 */     return desenhos;
 /*  99:    */   }
 /* 100:    */   
@@ -117,11 +119,16 @@
 /* 117:118 */     stmt.setString(10, desenho.getCodDE());
 /* 118:119 */     stmt.executeUpdate();
 /* 119:120 */     stmt.close();
+                  connection.close();
 /* 120:    */   }
 /* 121:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Desreforma_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Desreforma_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

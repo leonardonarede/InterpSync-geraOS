@@ -61,8 +61,10 @@
 /* 61:60 */       Long saida = Long.valueOf(rs.getLong("xano"));
 /* 62:61 */       stmt2.close();
 /* 63:62 */       stmt.close();
+                  conexao.close();
 /* 64:63 */       return saida;
 /* 65:   */     }
+                conexao.close();
 /* 66:65 */     return null;
 /* 67:   */   }
 /* 68:   */ }

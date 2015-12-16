@@ -66,6 +66,7 @@
 /*  66: 64 */       lista.add(osvr);
 /*  67:    */     }
 /*  68: 66 */     stmt.close();
+                  connection.close();
 /*  69: 67 */     return lista;
 /*  70:    */   }
 /*  71:    */   
@@ -97,6 +98,7 @@
 /*  97:    */       }
 /*  98:    */     }
 /*  99: 95 */     stmt.close();
+                  connection.close();
 /* 100: 96 */     return lista;
 /* 101:    */   }
 /* 102:    */   
@@ -111,11 +113,16 @@
 /* 111:108 */     stmt.setString(4, osvr.getCodigoReg());
 /* 112:109 */     stmt.executeUpdate();
 /* 113:110 */     stmt.close();
+                  connection.close();
 /* 114:    */   }
 /* 115:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Osvr_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Osvr_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

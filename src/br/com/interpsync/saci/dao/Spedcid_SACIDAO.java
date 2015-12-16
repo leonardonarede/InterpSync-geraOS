@@ -60,6 +60,8 @@
 /* 60:60 */       cid.setState(rs.getString("state"));
 /* 61:61 */       cid.setAuxShort1(Integer.valueOf(rs.getInt("auxShort1")));
 /* 62:   */     }
+                stmt.close();
+                conexao.close();
 /* 63:63 */     return cid;
 /* 64:   */   }
 /* 65:   */ }

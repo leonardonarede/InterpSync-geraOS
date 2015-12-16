@@ -62,6 +62,7 @@
 /*  62: 62 */       marcas.add(marca);
 /*  63:    */     }
 /*  64: 64 */     stmt.close();
+                  connection.close();
 /*  65: 65 */     return marcas;
 /*  66:    */   }
 /*  67:    */   
@@ -83,6 +84,7 @@
 /*  83: 84 */       marcas.add(marca);
 /*  84:    */     }
 /*  85: 86 */     stmt.close();
+                  connection.close();
 /*  86: 87 */     return marcas;
 /*  87:    */   }
 /*  88:    */   
@@ -97,11 +99,16 @@
 /*  97: 99 */     stmt.setString(4, marca.getCodMA());
 /*  98:100 */     stmt.executeUpdate();
 /*  99:101 */     stmt.close();
+                  connection.close();
 /* 100:    */   }
 /* 101:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Marcas_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Marcas_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

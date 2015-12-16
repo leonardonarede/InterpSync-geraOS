@@ -62,6 +62,7 @@
 /*  62: 63 */       lista.add(resp);
 /*  63:    */     }
 /*  64: 65 */     stmt.close();
+                  connection.close();
 /*  65: 66 */     return lista;
 /*  66:    */   }
 /*  67:    */   
@@ -83,6 +84,7 @@
 /*  83: 84 */       lista.add(resp);
 /*  84:    */     }
 /*  85: 86 */     stmt.close();
+                  connection.close();
 /*  86: 87 */     return lista;
 /*  87:    */   }
 /*  88:    */   
@@ -97,11 +99,16 @@
 /*  97: 99 */     stmt.setString(4, resp.getCNPJCPF());
 /*  98:100 */     stmt.executeQuery();
 /*  99:101 */     stmt.close();
+                  connection.close();
 /* 100:    */   }
 /* 101:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Resp_CliDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Resp_CliDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

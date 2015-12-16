@@ -61,6 +61,7 @@
 /* 61:61 */       lista.add(regiao);
 /* 62:   */     }
 /* 63:63 */     stmt.close();
+                connection.close();
 /* 64:64 */     return lista;
 /* 65:   */   }
 /* 66:   */   
@@ -81,6 +82,7 @@
 /* 81:81 */       lista.add(regiao);
 /* 82:   */     }
 /* 83:83 */     stmt.close();
+                connection.close();
 /* 84:84 */     return lista;
 /* 85:   */   }
 /* 86:   */   
@@ -94,11 +96,16 @@
 /* 94:95 */     stmt.setString(3, regiao.getCodRE());
 /* 95:96 */     stmt.executeUpdate();
 /* 96:97 */     stmt.close();
+                connection.close();
 /* 97:   */   }
 /* 98:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Regioes_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Regioes_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

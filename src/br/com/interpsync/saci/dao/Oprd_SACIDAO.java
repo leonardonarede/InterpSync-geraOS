@@ -62,6 +62,7 @@ import java.io.FileReader;
 /* 58:59 */     stmt.setString(9, oprd.getRemarks());
 /* 59:60 */     stmt.executeUpdate();
 /* 60:61 */     stmt.close();
+                conexao.close();
 /* 61:   */   }
               public void deletar (Integer Id, Integer loja)
                   throws ClassNotFoundException, SQLException, Exception{
@@ -71,6 +72,7 @@ import java.io.FileReader;
                   stmt.setInt(2, loja);
                   stmt.executeUpdate();
                   stmt.close();
+                  conexao.close();
               }
 /* 62:   */ }
 

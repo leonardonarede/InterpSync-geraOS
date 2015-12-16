@@ -54,6 +54,7 @@
 /* 54:55 */     stmt.setInt(4, marca.getStEI());
 /* 55:56 */     stmt.executeUpdate();
 /* 56:57 */     stmt.close();
+                connection.close();
 /* 57:   */   }
 /* 58:   */   
 /* 59:   */   public void atualizar(Marcas_ERP marca)
@@ -68,6 +69,7 @@
 /* 68:70 */     stmt.setString(4, marca.getCodMA());
 /* 69:71 */     stmt.executeUpdate();
 /* 70:72 */     stmt.close();
+                connection.close();
 /* 71:   */   }
 /* 72:   */   
 /* 73:   */   public Marcas_ERP localizarPorID(String id)
@@ -87,12 +89,17 @@
 /* 87:89 */       marca.setStEI(rs.getInt("StEI"));
 /* 88:   */     }
 /* 89:91 */     stmt.close();
+                connection.close();
 /* 90:92 */     return marca;
 /* 91:   */   }
 /* 92:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Marcas_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Marcas_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

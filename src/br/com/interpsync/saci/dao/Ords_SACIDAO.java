@@ -79,6 +79,7 @@
 /* 79:80 */     stmt.setInt(28, ords.getAuxShort2().intValue());
 /* 80:81 */     stmt.executeUpdate();
 /* 81:82 */     stmt.close();
+                conexao.close();
 /* 82:   */   }
 /* 83:   */   
 /* 84:   */   public Integer buscaUlt(Integer loja)
@@ -93,6 +94,8 @@
 /* 92:94 */     if (rs.next()) {
 /* 93:95 */       ultimo = Integer.valueOf(rs.getInt("ult"));
 /* 94:   */     }
+                stmt.close();
+                conexao.close();
 /* 95:97 */     return ultimo;
 /* 96:   */   }
               
@@ -104,6 +107,7 @@
                   stmt.setInt(2, loja);
                   stmt.executeUpdate();
                   stmt.close();
+                  conexao.close();
               }
 /* 97:   */ }
 

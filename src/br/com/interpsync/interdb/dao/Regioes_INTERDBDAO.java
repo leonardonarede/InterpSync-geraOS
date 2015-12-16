@@ -53,6 +53,7 @@
 /* 53:54 */     stmt.setInt(3, regiao.getStEI());
 /* 54:55 */     stmt.executeUpdate();
 /* 55:56 */     stmt.close();
+                connection.close();
 /* 56:   */   }
 /* 57:   */   
 /* 58:   */   public void atualizar(Regioes_ERP regiao)
@@ -65,6 +66,7 @@
 /* 65:67 */     stmt.setString(3, regiao.getCodRE());
 /* 66:68 */     stmt.executeUpdate();
 /* 67:69 */     stmt.close();
+                connection.close();
 /* 68:   */   }
 /* 69:   */   
 /* 70:   */   public Regioes_ERP localizarPorID(String id)
@@ -83,12 +85,17 @@
 /* 83:85 */       regioes.setStEI(rs.getInt("StEI"));
 /* 84:   */     }
 /* 85:87 */     stmt.close();
+                connection.close();
 /* 86:88 */     return regioes;
 /* 87:   */   }
 /* 88:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Regioes_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Regioes_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

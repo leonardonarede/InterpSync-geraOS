@@ -51,6 +51,7 @@
 /* 51:51 */     stmt.setInt(3, compl.getAuxLong1().intValue());
 /* 52:52 */     stmt.executeUpdate();
 /* 53:53 */     stmt.close();
+                conexao.close();
 /* 54:   */   }
 /* 55:   */ }
 

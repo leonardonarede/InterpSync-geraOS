@@ -54,6 +54,7 @@
 /* 54:55 */     stmt.setInt(4, laudo.getStEI());
 /* 55:56 */     stmt.executeUpdate();
 /* 56:57 */     stmt.close();
+                connection.close();
 /* 57:   */   }
 /* 58:   */   
 /* 59:   */   public void atualizar(Laudosrec_ERP laudo)
@@ -65,6 +66,7 @@
 /* 65:67 */     stmt.setString(2, laudo.getCodLA());
 /* 66:68 */     stmt.executeUpdate();
 /* 67:69 */     stmt.close();
+                connection.close();
 /* 68:   */   }
 /* 69:   */   
 /* 70:   */   public Laudosrec_ERP localizarPorID(String id)
@@ -84,12 +86,17 @@
 /* 84:86 */       laudo.setStEI(rs.getInt("StEI"));
 /* 85:   */     }
 /* 86:88 */     stmt.close();
+                connection.close();
 /* 87:89 */     return laudo;
 /* 88:   */   }
 /* 89:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Laudosrec_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Laudosrec_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

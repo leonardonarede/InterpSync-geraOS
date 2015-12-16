@@ -62,6 +62,7 @@
 /*  62: 62 */       coxins.add(coxin);
 /*  63:    */     }
 /*  64: 64 */     stmt.close();
+                  connection.close();
 /*  65: 65 */     return coxins;
 /*  66:    */   }
 /*  67:    */   
@@ -83,6 +84,7 @@
 /*  83: 83 */       coxins.add(coxin);
 /*  84:    */     }
 /*  85: 85 */     stmt.close();
+                  connection.close();
 /*  86: 86 */     return coxins;
 /*  87:    */   }
 /*  88:    */   
@@ -98,11 +100,16 @@
 /*  98: 99 */     stmt.setString(4, coxin.getCodCX());
 /*  99:100 */     stmt.executeUpdate();
 /* 100:101 */     stmt.close();
+                  connection.close();
 /* 101:    */   }
 /* 102:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Coxins_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Coxins_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

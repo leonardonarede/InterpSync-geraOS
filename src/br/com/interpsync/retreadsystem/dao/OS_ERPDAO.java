@@ -100,6 +100,7 @@
 /* 100:102 */       lista.add(os);
 /* 101:    */     }
 /* 102:104 */     stmt.close();
+                  connection.close();
 /* 103:105 */     return lista;
 /* 104:    */   }
 /* 105:    */   
@@ -156,6 +157,7 @@
 /* 156:159 */       lista.add(os);
 /* 157:    */     }
 /* 158:161 */     stmt.close();
+                  connection.close();
 /* 159:162 */     return lista;
 /* 160:    */   }
 /* 161:    */   
@@ -208,11 +210,16 @@
 /* 208:214 */     stmt.setInt(26, os.getNrOS().intValue());
 /* 209:215 */     stmt.executeUpdate();
 /* 210:216 */     stmt.close();
+                  connection.close();
 /* 211:    */   }
 /* 212:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.OS_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.OS_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

@@ -82,6 +82,7 @@
 /*  82: 84 */     stmt.setString(10, desenho.getCodDE());
 /*  83: 85 */     stmt.executeUpdate();
 /*  84: 86 */     stmt.close();
+                  connection.close();
 /*  85:    */   }
 /*  86:    */   
 /*  87:    */   public Desreforma_ERP localizarPorID(String id)
@@ -108,12 +109,17 @@
 /* 108:110 */       desenho.setStEI(rs.getInt("StEI"));
 /* 109:    */     }
 /* 110:112 */     stmt.close();
+                  connection.close();
 /* 111:113 */     return desenho;
 /* 112:    */   }
 /* 113:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Desreforma_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Desreforma_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

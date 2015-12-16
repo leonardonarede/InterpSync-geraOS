@@ -53,6 +53,7 @@
 /* 53:54 */     stmt.setInt(4, vendedor.getStEI());
 /* 54:55 */     stmt.executeUpdate();
 /* 55:56 */     stmt.close();
+                connection.close();
 /* 56:   */   }
 /* 57:   */   
 /* 58:   */   public Vendedores_ERP findbyid(String id)
@@ -71,12 +72,18 @@
 /* 71:72 */       vendedor.setRegiaoVE(rs.getString("RegiaoVE"));
 /* 72:73 */       vendedor.setStEI(rs.getInt("StEI"));
 /* 73:   */     }
+                stmt.close();
+                connection.close();
 /* 74:75 */     return vendedor;
 /* 75:   */   }
 /* 76:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Vendedores_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Vendedores_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

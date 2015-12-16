@@ -62,6 +62,7 @@
 /*  62: 62 */       medidas.add(medida);
 /*  63:    */     }
 /*  64: 64 */     stmt.close();
+                  connection.close();
 /*  65: 65 */     return medidas;
 /*  66:    */   }
 /*  67:    */   
@@ -83,6 +84,7 @@
 /*  83: 83 */       medidas.add(medida);
 /*  84:    */     }
 /*  85: 85 */     stmt.close();
+                  connection.close();
 /*  86: 86 */     return medidas;
 /*  87:    */   }
 /*  88:    */   
@@ -97,11 +99,16 @@
 /*  97: 98 */     stmt.setString(4, medida.getCodME());
 /*  98: 99 */     stmt.executeUpdate();
 /*  99:100 */     stmt.close();
+                  connection.close();
 /* 100:    */   }
 /* 101:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Medidas_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Medidas_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

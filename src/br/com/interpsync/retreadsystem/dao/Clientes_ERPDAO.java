@@ -83,6 +83,7 @@
 /*  83: 85 */       clientes.add(cliente);
 /*  84:    */     }
 /*  85: 87 */     stmt.close();
+                  connection.close();
 /*  86: 88 */     return clientes;
 /*  87:    */   }
 /*  88:    */   
@@ -121,6 +122,7 @@
 /* 121:124 */     stmt.setInt(25, cliente.getStEI());
 /* 122:125 */     stmt.executeUpdate();
 /* 123:126 */     stmt.close();
+                  connection.close();
 /* 124:    */   }
 /* 125:    */   
 /* 126:    */   public Clientes_ERP findbyid(String id)
@@ -161,6 +163,7 @@
 /* 161:164 */       cliente.setStEI(rs.getInt("StEI"));
 /* 162:    */     }
 /* 163:166 */     stmt.close();
+                  connection.close();
 /* 164:167 */     return cliente;
 /* 165:    */   }
 /* 166:    */   
@@ -199,11 +202,16 @@
 /* 199:204 */     stmt.setString(25, cliente.getCNPJCPF());
 /* 200:205 */     stmt.executeUpdate();
 /* 201:206 */     stmt.close();
+                  connection.close();
 /* 202:    */   }
 /* 203:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Clientes_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Clientes_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

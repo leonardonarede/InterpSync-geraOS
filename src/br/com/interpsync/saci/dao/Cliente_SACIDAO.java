@@ -86,6 +86,7 @@
 /*  86: 86 */       clientes.add(cliente);
 /*  87:    */     }
 /*  88: 88 */     stmt.close();
+                  conexao.close();
 /*  89: 89 */     return clientes;
 /*  90:    */   }
 /*  91:    */   
@@ -114,6 +115,8 @@
 /* 114:114 */       cliente.setCrlimit(rs.getBigDecimal("crlimit"));
 /* 115:115 */       cliente.setBrthplace_insc(rs.getString("brthplace_insc"));
 /* 116:    */     }
+                  stmt.close();
+                  conexao.close();
 /* 117:118 */     return cliente;
 /* 118:    */   }
 /* 119:    */ }

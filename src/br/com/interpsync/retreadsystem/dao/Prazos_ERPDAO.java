@@ -64,6 +64,7 @@
 /*  64: 64 */       lista.add(prazo);
 /*  65:    */     }
 /*  66: 66 */     stmt.close();
+                  connection.close();
 /*  67: 67 */     return lista;
 /*  68:    */   }
 /*  69:    */   
@@ -87,6 +88,7 @@
 /*  87: 87 */       lista.add(prazo);
 /*  88:    */     }
 /*  89: 89 */     stmt.close();
+                  connection.close();
 /*  90: 90 */     return lista;
 /*  91:    */   }
 /*  92:    */   
@@ -103,11 +105,16 @@
 /* 103:104 */     stmt.setString(6, prazo.getCodPR());
 /* 104:105 */     stmt.executeUpdate();
 /* 105:106 */     stmt.close();
+                  connection.close();
 /* 106:    */   }
 /* 107:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.retreadsystem.dao.Prazos_ERPDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.retreadsystem.dao.Prazos_ERPDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

@@ -55,6 +55,7 @@
 /* 55:56 */     stmt.setInt(5, modelo.getStEI());
 /* 56:57 */     stmt.executeUpdate();
 /* 57:58 */     stmt.close();
+                connection.close();
 /* 58:   */   }
 /* 59:   */   
 /* 60:   */   public void atualizar(Modelos_ERP modelo)
@@ -71,6 +72,7 @@
 /* 71:72 */     stmt.setString(5, modelo.getCodMO());
 /* 72:73 */     stmt.executeUpdate();
 /* 73:74 */     stmt.close();
+                connection.close();
 /* 74:   */   }
 /* 75:   */   
 /* 76:   */   public Modelos_ERP localizarPorID(String id)
@@ -91,12 +93,17 @@
 /* 91:92 */       modelo.setStEI(rs.getInt("StEI"));
 /* 92:   */     }
 /* 93:94 */     stmt.close();
+                connection.close();
 /* 94:95 */     return modelo;
 /* 95:   */   }
 /* 96:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Modelos_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Modelos_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

@@ -53,6 +53,7 @@
 /* 53:54 */     stmt.setBigDecimal(3, resp.getRespAVencer());
 /* 54:55 */     stmt.setInt(4, resp.getStEI());
 /* 55:56 */     stmt.close();
+                connection.close();
 /* 56:   */   }
 /* 57:   */   
 /* 58:   */   public void atualizar(Resp_Cli resp)
@@ -65,6 +66,7 @@
 /* 65:67 */     stmt.setInt(3, resp.getStEI());
 /* 66:68 */     stmt.executeUpdate();
 /* 67:69 */     stmt.close();
+                connection.close();
 /* 68:   */   }
 /* 69:   */   
 /* 70:   */   public Resp_Cli localizarPorID(String id)
@@ -84,12 +86,17 @@
 /* 84:86 */       resp.setStEI(rs.getInt("StEI"));
 /* 85:   */     }
 /* 86:88 */     stmt.close();
+                connection.close();
 /* 87:89 */     return resp;
 /* 88:   */   }
 /* 89:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Resp_CliINTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Resp_CliINTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

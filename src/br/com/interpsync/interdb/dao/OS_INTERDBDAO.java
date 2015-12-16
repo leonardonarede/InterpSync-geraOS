@@ -93,6 +93,7 @@
 /*  93: 98 */     stmt.setString(26, os.getLauFFC());
 /*  94: 99 */     stmt.executeUpdate();
 /*  95:100 */     stmt.close();
+                  connection.close();
 /*  96:    */   }
 /*  97:    */   
 /*  98:    */   public void atualizar(OS_ERP os)
@@ -143,6 +144,7 @@
 /* 143:151 */     stmt.setInt(27, os.getNrOS().intValue());
 /* 144:152 */     stmt.executeUpdate();
 /* 145:153 */     stmt.close();
+                  connection.close();
 /* 146:    */   }
 /* 147:    */   
 /* 148:    */   public OS_ERP localizarPorID(int id)
@@ -191,6 +193,7 @@
 /* 191:199 */       os.setStatusERP(Integer.valueOf(rs.getInt("StatusERP")));
 /* 192:    */     }
 /* 193:201 */     stmt.close();
+                  connection.close();
 /* 194:202 */     return os;
 /* 195:    */   }
 /* 196:    */   
@@ -240,6 +243,7 @@
 /* 240:248 */       lista.add(os);
 /* 241:    */     }
 /* 242:250 */     stmt.close();
+                  connection.close();
 /* 243:251 */     return lista;
 /* 244:    */   }
 /* 245:    */   
@@ -308,12 +312,17 @@
 /* 308:315 */       lista.add(os);
 /* 309:    */     }
 /* 310:317 */     stmt.close();
+                  connection.close();
 /* 311:318 */     return lista;
 /* 312:    */   }
 /* 313:    */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.OS_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.OS_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

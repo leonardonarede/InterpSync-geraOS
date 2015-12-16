@@ -54,6 +54,7 @@
 /* 54:56 */     stmt.setInt(4, servico.getStei());
 /* 55:57 */     stmt.executeUpdate();
 /* 56:58 */     stmt.close();
+                connection.close();
 /* 57:   */   }
 /* 58:   */   
 /* 59:   */   public void atualizar(Servicos_ERP servico)
@@ -66,6 +67,7 @@
 /* 66:69 */     stmt.setInt(3, servico.getStei());
 /* 67:70 */     stmt.executeUpdate();
 /* 68:71 */     stmt.close();
+                connection.close();
 /* 69:   */   }
 /* 70:   */   
 /* 71:   */   public Servicos_ERP localizarPorID(String id)
@@ -85,12 +87,17 @@
 /* 85:88 */       servico.setStei(rs.getInt("Stei"));
 /* 86:   */     }
 /* 87:90 */     stmt.close();
+                connection.close();
 /* 88:91 */     return servico;
 /* 89:   */   }
 /* 90:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Servicos_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Servicos_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */

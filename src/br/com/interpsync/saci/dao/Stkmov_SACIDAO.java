@@ -58,6 +58,7 @@
 /* 58:59 */     stmt.setInt(9, movimento.getBits().intValue());
 /* 59:60 */     stmt.executeUpdate();
 /* 60:61 */     stmt.close();
+                conexao.close();
 /* 61:   */   }
 /* 62:   */ }
 

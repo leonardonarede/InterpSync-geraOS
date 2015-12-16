@@ -76,11 +76,16 @@
 /* 76:77 */     stmt.setInt(25, cliente.getStEI());
 /* 77:78 */     stmt.executeUpdate();
 /* 78:79 */     stmt.close();
+                connection.close();
 /* 79:   */   }
 /* 80:   */ }
 
-
-/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
- * Qualified Name:     br.com.interpsync.interdb.dao.Clientes_INTERDBDAO
- * JD-Core Version:    0.7.0.1
+
+
+/* Location:           C:\Users\Leonardo\Desktop\INT\InterpSync.jar
+
+ * Qualified Name:     br.com.interpsync.interdb.dao.Clientes_INTERDBDAO
+
+ * JD-Core Version:    0.7.0.1
+
  */
